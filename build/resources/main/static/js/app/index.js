@@ -1,9 +1,11 @@
 var main = {
     init : function() {
         var _this = this;
+
         $('#btn-save').on('click',function() {
             _this.save();
         });
+
         $('#btn-update').on('click',function() {
             _this.update();
         });
@@ -33,6 +35,8 @@ var main = {
             title: $('#title').val(),
             content: $('#content').val()
         };
+
+        var id = $('#id').val();
 
         $.ajax({
             type: 'PUT',
